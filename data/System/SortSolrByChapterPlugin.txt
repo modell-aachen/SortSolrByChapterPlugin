@@ -1,0 +1,51 @@
+%META:TOPICPARENT{name="Plugins"}%
+<!--
+One line description, required for extensions repository catalog.
+   * Set SHORTDESCRIPTION = %$SHORTDESCRIPTION%
+-->
+---+!! Sort Solr By Chapter Plugin
+
+%SHORTDESCRIPTION%
+
+%TOC%
+
+---++ Usage
+
+Formfields handleled by this plugin will be sorted into a =*_sort= field (eg. _Chapter_ will be indexed into =field_Chapter_sort=). This field will be padded, so sorting by it will lead to the desired result.
+
+For instance =2.3.4= will be indexed as =0002.0003.0004= while =10.2.3= will be indexed as =0010.0002.0003=, so they will be sorted as =10.2.3, 2.0.4=.
+
+---++ Preferences
+
+---+++ ={SortSolrByChapterPlugin}{FieldNames}=
+
+Set this hash to a list of field names you wish to index.
+
+Format: <verbatim>
+{SortSolrByChapterPlugin}{FieldNames} = {
+    'WebName' => 'FieldName1, FieldName2',
+    'all' => 'FieldName3'
+};
+</verbatim>
+
+The =all= web applies to all webs.
+
+---+++ ={SortSolrByChapterPlugin}{Padding}=
+
+This plugin works by padding each number part. The length of the padding can be configured here. Set it to the highest number you expect to encounter.
+
+---++ Installation
+%$INSTALL_INSTRUCTIONS%
+
+---++ Info
+
+|  Author: | %$CREATED_AUTHOR% |
+|  Copyright: | %$CREATEDYEAR%, %$CREATED_AUTHOR%, All Rights Reserved |
+|  License: | GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]]) |
+|  Dependencies: | %$DEPENDENCIES% |
+|  Version: | %$VERSION% |
+|  Release: | %$RELEASE% |
+|  Change&nbsp;History: | <!-- versions below in reverse order -->&nbsp; |
+|  1.0.0 (%$CREATEDATE%): | Initial version |
+|  Home: | http://foswiki.org/Extensions/%TOPIC% |
+|  Support: | http://foswiki.org/Support/%TOPIC% |

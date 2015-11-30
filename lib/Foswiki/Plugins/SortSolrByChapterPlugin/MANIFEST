@@ -1,0 +1,4 @@
+!noci
+data/System/SortSolrByChapterPlugin.txt 0644 Documentation page
+lib/Foswiki/Plugins/SortSolrByChapterPlugin.pm 0444 Perl module
+lib/Foswiki/Plugins/SortSolrByChapterPlugin/Config.spec 0444 Configuration
