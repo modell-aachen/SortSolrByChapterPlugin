@@ -51,7 +51,7 @@ sub indexTopicHandler {
         my $chapters = $meta->get('FIELD', $fieldName);
         return unless $chapters;
         $chapters = $chapters->{value};
-        return unless defined $chapters && $chapters =~ /^\d+([\.\d]*)?$/;
+        return unless defined $chapters && $chapters =~ /^\d+([\.,\d]*)?$/;
 
         my $padding = $Foswiki::cfg{Plugins}{SortSolrByChapterPlugin}{Padding} || 4;
 
