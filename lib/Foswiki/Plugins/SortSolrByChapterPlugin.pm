@@ -49,9 +49,9 @@ sub indexTopicHandler {
     foreach my $fieldName ( @fieldNames ) {
 
         my $chapters = $meta->get('FIELD', $fieldName);
-        return unless $chapters;
+        next unless $chapters;
         $chapters = $chapters->{value};
-        return unless defined $chapters && $chapters =~ /^\d+([\.,\d]*)?$/;
+        next unless defined $chapters && $chapters =~ /^\d+([\.,\d]*)?$/;
 
         my $padding = $Foswiki::cfg{Plugins}{SortSolrByChapterPlugin}{Padding} || 4;
 
