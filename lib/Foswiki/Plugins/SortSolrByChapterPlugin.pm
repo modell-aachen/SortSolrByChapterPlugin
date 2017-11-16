@@ -67,7 +67,7 @@ sub indexTopicHandler {
             $toIndex = $newToIndex unless(defined $toIndex && (($toIndex cmp $newToIndex) < 0));
         }
 
-        $doc->add_fields( "field_${fieldName}_sort" => $toIndex ) if $toIndex;
+        $doc->add_fields( "field_${fieldName}_padded_sort" => $toIndex ) if $toIndex;
     }
 }
 
